@@ -1,0 +1,13 @@
+HDUSER
+#Compilar (en directorio de wordcountf)
+
+javac -classpath /home/victor/hadoop/share/hadoop/common/hadoop-common-2.7.0.jar:/home/victor/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.0.jar:/home/victor/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar -d /home/victor/Escritorio/wordcountarchivos *.java
+
+#Convertir archivo Jar
+
+jar -cvf wordcountj.jar -C /home/victor/Escritorio/wordcountarchivos/wordcountclass .
+
+#Correr archivo Jar (En directorio de Hadoop)
+
+bin/hadoop jar /home/victor/Escritorio/wordcountarchivos/wordcountj.jar WordCount /user/hduser/ salidas
+

@@ -1,0 +1,35 @@
+instalacion de java:
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:ferramroberto/java
+
+sudo apt-get update
+
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+
+
+
+java -version
+
+
+
+agregar hduser:
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+
+
+configuracion de ssh:
+user@ubuntu:~$ su - hduser
+hduser@ubuntu:~$ ssh-keygen -t rsa -P ""
+
+
+hduser@ubuntu:~$ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
+hduser@ubuntu:~$ ssh localhost
+
+
+desahabilitar ipv6:
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+

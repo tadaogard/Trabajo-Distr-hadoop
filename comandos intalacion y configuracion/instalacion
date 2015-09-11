@@ -1,0 +1,6 @@
+hadoop
+http://www.eu.apache.org/dist/hadoop/core/hadoop-2.7.0/
+
+sudo tar xzf hadoop-2.7.0.tar.gz
+sudo mv hadoop-1.0.3 hadoop
+sudo chown -R hduser:hadoop hadoop

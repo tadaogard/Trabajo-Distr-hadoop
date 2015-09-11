@@ -1,0 +1,5 @@
+formateo (desde master/hadoop)
+bin/hadoop namenode -format
+
+iniciar hadoop
+sbin/start-dfs.sh
